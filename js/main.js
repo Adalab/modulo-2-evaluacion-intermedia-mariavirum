@@ -3,6 +3,7 @@
 const numberElement = document.querySelector('.js-number');
 const updateElement = document.querySelector('.js-btn');
 const trackElement = document.querySelector('.js-track');
+const attempsElement = document.querySelector('.js-attemps');
 
 //1-Crear funcion para número aleatorio
 function getRandomNumber(max) {
@@ -12,6 +13,9 @@ function getRandomNumber(max) {
 const random = getRandomNumber(100);
 //comprobar en console que funciona el número aleatorio 
 console.log (random);
+
+//3. El contador = 0 fuera del evento
+let counterNumber = 0;
 
 //2-Evento al introducir número y pulsar botón
 //Condicionales
@@ -34,8 +38,16 @@ function handleLuck(){
     else {
         trackElement.innerHTML = 'El número debe estar entre 1 y 100';
     }
+    function counter (){
+        let counterNumberTotal = counterNumber + 1;
+        attempsElement.innherHTML = 'Número de intentos:' + counterNumberTotal;
+        
+        console.log (counter);
+    }
 
 }
+
+
 
 
 
