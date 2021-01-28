@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.game {
+  width: 100%;
+  height: 100vh;
+  background-color: darkmagenta;
+  padding: 100px;
+}
+
+.title {
+  color: white;
+  padding: 20px 0;
+}
+
+.form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+.label {
+  font-size: 20px;
+  font-weight: bold;
+  color: cornflowerblue;
+  padding-bottom: 20px;
+}
+
+.input-number {
+  width: 30%;
+  padding: 10px;
+}
+
+.btn {
+  width: 20%;
+  padding: 15px 30px;
+  background-color: darkorange;
+  border-radius: 10px;
+  font-size: 15px;
+  border: 0;
+}
+
+.track {
+  color: white;
+  font-size: 20px;
+}
+.attemps {
+  padding: 15px 0;
+  color: black;
+}
