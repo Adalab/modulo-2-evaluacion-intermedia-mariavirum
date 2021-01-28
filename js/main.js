@@ -38,13 +38,14 @@ function handleLuck(){
     else {
         trackElement.innerHTML = 'El número debe estar entre 1 y 100';
     }
-    function counter (){
-        let counterNumberTotal = counterNumber + 1;
-        attempsElement.innherHTML = 'Número de intentos:' + counterNumberTotal;
-        
-        console.log (counter);
-    }
+    
 
+}
+function counter (){
+    let counterNumberTotal = counterNumber + 1;
+    attempsElement.innherHTML = 'Número de intentos:' + counterNumberTotal;
+    
+    console.log (counter);
 }
 
 
