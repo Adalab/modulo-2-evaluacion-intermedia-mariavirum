@@ -27,13 +27,13 @@ function handleLuck(){
     else if (numberValue > 100){
         trackElement.innerHTML = 'Número demasiado alto';
     }
-    else if (numberValue){
-
+    else if (numberValue < 1){
+        trackElement.innerHTML = 'Número demasiado bajo';
+    
     }
-
-
-
-
+    else {
+        trackElement.innerHTML = 'El número debe estar entre 1 y 100';
+    }
 
 }
 
