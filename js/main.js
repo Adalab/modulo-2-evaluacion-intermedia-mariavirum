@@ -6,8 +6,6 @@ const trackElement = document.querySelector('.js-track');
 const attempsElement = document.querySelector('.js-attemps');
 const spanElement = document.querySelector('.js-span');
 
-
-
 //1-Crear funcion para número aleatorio
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
@@ -30,11 +28,9 @@ function showClues(message) {
     trackElement.innerHTML = "Pista:" + message;
   }
 
-
 function handleNumber(){
     //obtengo el valor numçérico del input donde se introduce el número
     const numberValue = parseInt(numberElement.value);
-
 
     if (numberValue === random){
         showClues("Has ganado campeona!!!");
@@ -44,21 +40,15 @@ function handleNumber(){
     }
     else if (numberValue < 1){
         showClues("Número demasiado bajo");
-    
     }
     else {
         showClues("El número debe estar entre 1 y 100");
     }
 
-    
-
 }
-
 function handleCounter (){
     counterNumber = counterNumber + 1;
     spanElement.innerHTML = counterNumber;
-
 }
-
 
 updateElement.addEventListener('click', handleLuck);
