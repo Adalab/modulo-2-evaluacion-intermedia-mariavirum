@@ -14,8 +14,6 @@ function getRandomNumber(max) {
    }
 
 const random = getRandomNumber(100);
-//comprobar en console que funciona el número aleatorio 
-console.log (random);
 
 //3. El contador = 0 fuera del evento
 let counterNumber = 0;
@@ -24,37 +22,43 @@ let counterNumber = 0;
 //Condicionales
 
 function handleLuck(){
+    handleNumber();
+    handleCounter ();
+}
+
+function showClues(message) {
+    trackElement.innerHTML = "Pista:" + message;
+  }
+
+
+function handleNumber(){
     //obtengo el valor numçérico del input donde se introduce el número
     const numberValue = parseInt(numberElement.value);
-    console.log (numberValue);
+
 
     if (numberValue === random){
-        trackElement.innerHTML = 'Has ganado campeona!!!';
+        showClues("Has ganado campeona!!!");
     }
     else if (numberValue > 100){
-        trackElement.innerHTML = 'Número demasiado alto';
+        showClues("Número demasiado alto");
     }
     else if (numberValue < 1){
-        trackElement.innerHTML = 'Número demasiado bajo';
+        showClues("Número demasiado bajo");
     
     }
     else {
-        trackElement.innerHTML = 'El número debe estar entre 1 y 100';
+        showClues("El número debe estar entre 1 y 100");
     }
 
-  counter ();
     
 
 }
 
-function counter (){
+function handleCounter (){
     counterNumber = counterNumber + 1;
     spanElement.innerHTML = counterNumber;
-    
-    console.log (counter);
+
 }
-
-
 
 
 updateElement.addEventListener('click', handleLuck);
