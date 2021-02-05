@@ -35,14 +35,17 @@ function handleNumber(){
     if (numberValue === random){
         showClues("Has ganado campeona!!!");
     }
-    else if (numberValue > 100){
-        showClues("Número demasiado alto");
+    else if (numberValue > 100 || numberValue < 1){
+        showClues("Tienes que introducir un número entre 1 y 100.");
     }
-    else if (numberValue < 1){
-        showClues("Número demasiado bajo");
+    else if (numberValue < random){
+        showClues("Demasiado bajo.");
     }
-    else {
-        showClues("El número debe estar entre 1 y 100");
+    else if (numberValue > random){
+        showClues("Demasiado alto.");
+    }
+    else{
+        showClues("Funciona solo con números");
     }
 
 }
